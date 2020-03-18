@@ -1,0 +1,332 @@
+.greeting-section {
+    @include section-color (#87509c);
+
+    .content {
+        @include content (60%, 0 auto);
+        text-align: center;
+        padding: 95px 0 125px 0;
+
+        .greeting {
+            @include font (#f7f3ea, "Titillium Web", 42px, 700);
+            line-height: 48.82px;
+            letter-spacing: 1.5px;
+        }
+
+        .work-with-us-button {
+            @include reset-btn-inp;
+            @include btn (#eb7d4b, 16px 38px, 9px);
+            @include font (#ffffff, "Titillium Web", 18px, 400);
+            margin-top: 50px;
+            letter-spacing: 0.27px;
+            line-height: 26.19px;
+            text-transform: uppercase;
+
+
+            &:hover {
+                background-color: #08a738;
+                transition: ease-in-out 0.6s;
+            }
+        }
+    }
+}
+
+
+.services-section {
+    @include section-color (#17c2a4);
+
+    .content {
+        @include content (75%, 0 auto);
+        text-align: center;
+        padding: 119px 0 128px 0;
+
+        .services-title {
+            @include font (#ffffff, "Titillium Web", 40px, 700);
+            line-height: 29.91px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 87px;
+                height: 4px;
+                margin: 21px auto 23px;
+                background-color: #000000;
+                opacity: 0.15;
+            }
+        }
+
+        .services-description {
+            @include font (#ffffff, "Titillium Web", 18px, 400);
+            width: 60%;
+            margin: 23px auto 78px auto;
+            line-height: 26px;
+        }
+
+        .services {
+            @include flex (space-between);
+
+            .service {
+                width: 21%;
+
+                img {
+                    height: 124px;
+                }
+
+                .service-title {
+                    @include font (#ffffff, "Titillium Web", 24px, 700);
+                    margin: 62px 0 27px 0;
+                    display: block;
+                    text-transform: uppercase;
+                }
+
+                .service-description {
+                    @include font (#ffffff, "Titillium Web", 16px, 300);
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+.team-section {
+    @include section-color (#e7f1f8);
+
+    .content {
+        @include content (75%, 0 auto);
+        text-align: center;
+        padding: 119px 0 122px 0;
+
+        .team-title {
+            @include font (#3c4761, "Titillium Web", 41px, 700);
+            line-height: 30.87px;
+            text-transform: uppercase;
+        }
+
+        .team-description {
+            @include font (#3c4761, "Titillium Web", 19px, 400);
+            margin: 51px 0 78px 0;
+            line-height: 26.84px;
+        }
+
+        .team-wrapper {
+            @include flex (space-between);
+
+            .person {
+                height: 500px;
+                width: 20%;
+                text-align: center;
+                position: relative;
+
+                .person-name {
+                    @include font (#3c4761, "Titillium Web", 24px, 700);
+                    display: block;
+                    margin: 41px 0 15px 0;
+                    line-height: 18px;
+                    text-transform: uppercase;
+                }
+
+                .person-position {
+                    @include font (#30bae7, "Titillium Web", 16px, 400);
+                    display: block;
+                    line-height: 18px;
+                }
+
+                .person-description {
+                    @include font (#3c4761, "Titillium Web", 16px, 300);
+                    margin: 30px 0 29px 0;
+                }
+
+                .person-social-networks-wrapper {
+                    @include flex (space-around);
+                    width: 85%;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0 auto;
+                }
+
+                .small-person-social-networks-wrapper {
+                    @include flex (space-around);
+                    width: 70%;
+                    position: absolute;
+                    bottom: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+.skills-section {
+    @include section-color (#ffffff);
+
+    .content {
+        @include content (75%, 0 auto);
+        padding: 117px 0 122px 0;
+        text-align: center;
+
+        .skill-title {
+            @include font (#3c4761, "Titillium Web", 40px, 700);
+            line-height: 29.91px;
+            text-transform: uppercase;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 87px;
+                height: 4px;
+                margin: 21px auto 23px;
+                background-color: #dfe8ed;
+            }
+        }
+
+        .skill-description {
+            @include font (#3c4761, "Titillium Web", 18px, 400);
+            line-height: 26px;
+        }
+
+        .skills-wrapper {
+            @include flex (space-between);
+            margin-top: 84px;
+
+            .skill {
+                @include content (20%, 0);
+
+                .skill-name {
+                    @include font (#3c4761, "Titillium Web", 24px, 700);
+                    display: block;
+                    margin-top: 32px;
+                    line-height: 18px;
+                    text-transform: uppercase;
+
+                }
+            }
+        }
+    }
+}
+
+.portfolio-section {
+    @include section-color (#ffdd99);
+
+    .content {
+        @include content (75%, 0 auto);
+        text-align: center;
+        padding: 120px 0 109px 0;
+
+        .portfolio-title {
+            @include font (#393939, "Titillium Web", 40px, 700);
+            line-height: 29.91px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 120px;
+
+            &:after {
+                content: "";
+                display: block;
+                width: 87px;
+                height: 4px;
+                margin: 21px auto 23px;
+                background-color: #dfe8ed;
+            }
+        }
+
+        .portfolio-description {
+            @include font (#393939, "Titillium Web", 18px, 400);
+            line-height: 19.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.36px;
+        }
+
+        .portfolio-filter-wrapper {
+            @include content (42%, 42px auto 62px auto);
+            @include flex (space-between);
+
+            .portfolio-filter-button {
+                @include reset-btn-inp;
+                @include font (#393939, "Titillium Web", 18px, 400);
+                width: 22%;
+                padding: 8px 13px;
+                line-height: 19.5px;
+                text-transform: uppercase;
+                letter-spacing: 0.36px;
+                background-color: #ebcb8d;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #ffffff;
+                }
+            }
+        }
+
+        .portfolio-projects-wrapper {
+            @include flex (space-between);
+            margin-top: 65px;
+
+            .project {
+                width: 45%;
+
+                span {
+                    display: block;
+                    @include font (#393939, "Titillium Web", 18px, 400);
+                    line-height: 19.5px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.36px;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .more-projects-btn {
+            @include reset-btn-inp;
+            margin-top: 23px;
+            padding: 18px 35px;
+            background-color: #17c2a4;
+            border-radius: 7px;
+            @include font (#ffffff, "Titillium Web", 18px, 400);
+            line-height: 26.19px;
+            text-transform: uppercase;
+            letter-spacing: 0.27px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #1a7250;
+                transition: ease-in-out 0.6s;
+            }
+        }
+    }
+}
+
+// .reviews-section {
+//     @include section-color (#d74680);
+
+//     .content {
+//         @include content (80%, 0 auto);
+//         text-align: center;
+//         padding: 119px 0 130px 0;
+
+//         .reviews-title {
+//             @include font (#ffffff, "Titillium Web", 40px, 700);
+//             line-height: 29.91px;
+//             text-transform: uppercase;
+//             letter-spacing: 4px;
+
+//             &:after {
+//                 content: "";
+//                 display: block;
+//                 width: 87px;
+//                 height: 4px;
+//                 margin: 21px auto 23px;
+//                 background-color: #000000;
+//                 opacity: 0.15;
+//             }
+//         }
+
+//         .reviews-description {
+//             @include font (#ffffff, "Titillium Web", 18px, 400);
+//             line-height: 26px;
+//             letter-spacing: 0.36px;
+//         }
+
+
+//     }
+// }

@@ -1,0 +1,22 @@
+footer {
+    @include section-color (#344b8e);
+
+    .content {
+        @include content(65%, 0 auto);
+
+        ul {
+            @include reset-list (13%);
+            @include flex (space-between);
+            padding: 48px 0 41px 0;
+
+            li {
+                @include font (#ffffff, "Titillium Web", 24px, 400);
+
+                &:hover {
+                    color: #30bae7;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

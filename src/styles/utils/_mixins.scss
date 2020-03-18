@@ -1,0 +1,62 @@
+@mixin clr {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+    *zoom: 1;
+  }
+}
+
+@mixin float-l {
+  float: left;
+}
+
+@mixin float-r {
+  float: right;
+}
+
+@mixin reset-link {
+  display: block;
+  text-decoration: none;
+}
+
+@mixin reset-list ($li-width) {
+  list-style: none;
+
+  li {
+    text-decoration: none;
+    width: $li-width;
+  }
+}
+
+@mixin reset-btn-inp {
+  outline: none;
+  border: 0;
+}
+
+@mixin btn ($bg-color, $padding, $bor-rad) {
+  background-color: $bg-color;
+  padding: $padding;
+  border-radius: $bor-rad;
+}
+
+@mixin content ($width, $margin) {
+  width: $width;
+  margin: $margin;
+}
+
+@mixin section-color ($bg-color) {
+  background-color: $bg-color;
+}
+
+@mixin flex ($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@mixin font ($color, $family, $size, $weight) {
+  color: $color;
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+}

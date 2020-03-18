@@ -1,0 +1,38 @@
+header {
+    @include clr;
+    @include section-color (#87509c);
+    padding: 18px 0;
+
+    .content {
+        @include content(75%, 0 auto);
+
+        .logo-wrapper {
+            width: 20%;
+            @include float-l;
+        }
+
+        .nawigation {
+            @include float-r;
+            width: 40%;
+
+            ul {
+                @include reset-list (20%);
+                @include flex (space-between);
+
+                .nav-link {
+                    @include reset-link;
+                    @include font (#ffffff, "Titillium Web", 16px, 400);
+                    text-transform: uppercase;
+                    padding: 8px 13px;
+                    border-radius: 7px;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: #643a79;
+                        transition: ease-in-out 0.6s;
+                    }
+                }
+            }
+        }
+    }
+}

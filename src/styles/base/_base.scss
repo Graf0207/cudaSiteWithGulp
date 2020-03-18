@@ -1,0 +1,23 @@
+/* Turn on font smoothing (does't working in IE) */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  @include clr
+}
+
+.float-l {
+  float: left;
+}
+
+.float-r {
+  float: right;
+}
