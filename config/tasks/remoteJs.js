@@ -8,9 +8,9 @@ import concat from 'gulp-concat'
 
 import { handleError, liveEnv, project } from '../index'
 
-const jsPaths = project.sourceDirectory + '/' + project.scriptsDirectory + '/**/*.js'
+const jsPaths = project.sourceDirectory + '/' + project.remoteWidgetDirectory + '/' + project.scriptsDirectory + '/main.js'
 const jsFileName = project.jsMinFileName
-const dest = project.distDirectory + '/' + project.scriptsDirectory
+const dest = project.distDirectory + '/' + project.remoteWidgetDirectory + '/' + project.scriptsDirectory
 
 export default function () {
   return function () {

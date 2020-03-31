@@ -65,9 +65,11 @@
 
         .services {
             @include flex (space-between);
+            flex-direction: row;
+            flex-wrap: wrap;
 
             .service {
-                width: 21%;
+                width: 23%;
 
                 img {
                     height: 124px;
@@ -111,45 +113,49 @@
 
         .team-wrapper {
             @include flex (space-between);
+            flex-direction: row;
+            flex-wrap: wrap;
 
             .person {
+                width: 23%;
                 height: 500px;
-                width: 20%;
                 text-align: center;
-                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
-                .person-name {
-                    @include font (#3c4761, "Titillium Web", 24px, 700);
-                    display: block;
-                    margin: 41px 0 15px 0;
-                    line-height: 18px;
-                    text-transform: uppercase;
-                }
+                div {
+                    height: 450px;
 
-                .person-position {
-                    @include font (#30bae7, "Titillium Web", 16px, 400);
-                    display: block;
-                    line-height: 18px;
-                }
+                    .person-name {
+                        @include font (#3c4761, "Titillium Web", 24px, 700);
+                        display: block;
+                        margin: 41px 0 15px 0;
+                        line-height: 18px;
+                        text-transform: uppercase;
+                    }
 
-                .person-description {
-                    @include font (#3c4761, "Titillium Web", 16px, 300);
-                    margin: 30px 0 29px 0;
+                    .person-position {
+                        @include font (#30bae7, "Titillium Web", 16px, 400);
+                        display: block;
+                        line-height: 18px;
+                    }
+
+                    .person-description {
+                        @include font (#3c4761, "Titillium Web", 16px, 300);
+                        margin: 30px 0 29px 0;
+                    }
                 }
 
                 .person-social-networks-wrapper {
                     @include flex (space-around);
                     width: 85%;
-                    position: absolute;
-                    bottom: 0;
                     margin: 0 auto;
                 }
 
                 .small-person-social-networks-wrapper {
                     @include flex (space-around);
                     width: 70%;
-                    position: absolute;
-                    bottom: 0;
                     margin: 0 auto;
                 }
             }
@@ -188,9 +194,11 @@
         .skills-wrapper {
             @include flex (space-between);
             margin-top: 84px;
+            flex-direction: row;
+            flex-wrap: wrap;
 
             .skill {
-                @include content (20%, 0);
+                width: 23%;
 
                 .skill-name {
                     @include font (#3c4761, "Titillium Web", 24px, 700);
@@ -205,128 +213,42 @@
     }
 }
 
-.portfolio-section {
-    @include section-color (#ffdd99);
+
+
+@media screen and(max-width: 1200px) {
+
+    h2,
+    .greeting {
+        font-size: 32px !important;
+    }
 
     .content {
-        @include content (75%, 0 auto);
-        text-align: center;
-        padding: 120px 0 109px 0;
+        width: 90% !important;
+        margin: 0 auto 0 auto !important;
+    }
 
-        .portfolio-title {
-            @include font (#393939, "Titillium Web", 40px, 700);
-            line-height: 29.91px;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-top: 120px;
-
-            &:after {
-                content: "";
-                display: block;
-                width: 87px;
-                height: 4px;
-                margin: 21px auto 23px;
-                background-color: #dfe8ed;
-            }
-        }
-
-        .portfolio-description {
-            @include font (#393939, "Titillium Web", 18px, 400);
-            line-height: 19.5px;
-            text-transform: uppercase;
-            letter-spacing: 0.36px;
-        }
-
-        .portfolio-filter-wrapper {
-            @include content (42%, 42px auto 62px auto);
-            @include flex (space-between);
-
-            .portfolio-filter-button {
-                @include reset-btn-inp;
-                @include font (#393939, "Titillium Web", 18px, 400);
-                width: 22%;
-                padding: 8px 13px;
-                line-height: 19.5px;
-                text-transform: uppercase;
-                letter-spacing: 0.36px;
-                background-color: #ebcb8d;
-                cursor: pointer;
-
-                &:hover {
-                    background-color: #ffffff;
-                }
-            }
-        }
-
-        .portfolio-projects-wrapper {
-            @include flex (space-between);
-            margin-top: 65px;
-
-            .project {
-                width: 45%;
-
-                span {
-                    display: block;
-                    @include font (#393939, "Titillium Web", 18px, 400);
-                    line-height: 19.5px;
-                    text-transform: uppercase;
-                    letter-spacing: 0.36px;
-                    margin-top: 30px;
-                }
-            }
-        }
-
-        .more-projects-btn {
-            @include reset-btn-inp;
-            margin-top: 23px;
-            padding: 18px 35px;
-            background-color: #17c2a4;
-            border-radius: 7px;
-            @include font (#ffffff, "Titillium Web", 18px, 400);
-            line-height: 26.19px;
-            text-transform: uppercase;
-            letter-spacing: 0.27px;
-
-            &:hover {
-                cursor: pointer;
-                background-color: #1a7250;
-                transition: ease-in-out 0.6s;
-            }
-        }
+    .person-position {
+        font-size: 21px !important;
     }
 }
 
-// .reviews-section {
-//     @include section-color (#d74680);
+@media screen and(max-width: 1000px) {
 
-//     .content {
-//         @include content (80%, 0 auto);
-//         text-align: center;
-//         padding: 119px 0 130px 0;
+    .service,
+    .person,
+    .skill {
+        width: 35% !important;
+        margin: 40px auto 40px !important;
 
-//         .reviews-title {
-//             @include font (#ffffff, "Titillium Web", 40px, 700);
-//             line-height: 29.91px;
-//             text-transform: uppercase;
-//             letter-spacing: 4px;
+    }
+}
 
-//             &:after {
-//                 content: "";
-//                 display: block;
-//                 width: 87px;
-//                 height: 4px;
-//                 margin: 21px auto 23px;
-//                 background-color: #000000;
-//                 opacity: 0.15;
-//             }
-//         }
+@media screen and(max-width: 800px) {
 
-//         .reviews-description {
-//             @include font (#ffffff, "Titillium Web", 18px, 400);
-//             line-height: 26px;
-//             letter-spacing: 0.36px;
-//         }
+    .service,
+    .person,
+    .skill {
+        width: 51% !important;
 
-
-//     }
-// }
+    }
+}

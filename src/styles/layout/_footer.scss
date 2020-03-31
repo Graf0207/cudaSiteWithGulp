@@ -5,17 +5,33 @@ footer {
         @include content(65%, 0 auto);
 
         ul {
-            @include reset-list (13%);
-            @include flex (space-between);
+            @include reset-list (0);
+            @include flex (space-around);
+            flex-direction: row;
+            flex-wrap: wrap;
             padding: 48px 0 41px 0;
 
             li {
                 @include font (#ffffff, "Titillium Web", 24px, 400);
+                width: 13%;
 
                 &:hover {
                     color: #30bae7;
                     cursor: pointer;
                 }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1000px) {
+
+    .content {
+
+        ul {
+
+            li {
+                width: 25% !important;
             }
         }
     }

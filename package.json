@@ -43,7 +43,8 @@
     "js": "gulp js",
     "fonts": "gulp fonts",
     "images": "gulp images",
-    "clean": "gulp clean"
+    "clean": "gulp clean",
+    "remote": "gulp remote"
   },
   "keywords": [
     "sass",

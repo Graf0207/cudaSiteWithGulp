@@ -7,6 +7,10 @@ import fonts from './config/tasks/fonts'
 import images from './config/tasks/images'
 import watch from './config/tasks/watch'
 import build from './config/tasks/build'
+import remote from './config/tasks/remote'
+import remoteStyles from './config/tasks/remoteStyles'
+import remoteJs from './config/tasks/remoteJs'
+
 
 exports.styles = styles()
 exports.js = js()
@@ -15,3 +19,6 @@ exports.fonts = fonts()
 exports.images = images()
 exports.watch = watch()
 exports.default = build()
+exports.remote = remote()
+exports.remoteStyles = remoteStyles()
+exports.remoteJs = remoteJs()
